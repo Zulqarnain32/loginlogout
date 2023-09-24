@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+  list-style: none;
+}
+.navbar-container{
+  height: 60px;
+  width: 100%;
+  background-color: rgb(57, 54, 54);
+  color: #fff;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.links-side{
+  padding: 0 10px;
+  margin: 0;
+}
+.nav-links{
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.main-title{
+  font-size: 22px;
+  font-weight: 700;
+}
+.register-side{
+  /* width: 90px; */
+  height: 35px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgb(255, 153, 0);
+  border: none;
+  color: #fff;
+  padding: 0 14px;
+
+}
+
+/*? responsive code for navbar */
+@media(max-width:400px){
+  .navbar-container{
+    padding: 0 5px;
+  }
+  .nav-links{
+    margin-right: 5px;
+    font-size: 15px;
+  }
+  .main-title{
+    font-size: 16px;
+    color: rgb(255, 20, 235);
+  }
+  .register-side{
+    width: 70px;
+    /* padding: 0 10px; */
+  }
+  .green{
+    color: rgb(42, 205, 255);
+  }
+  .red{
+    color: rgb(18, 255, 18);
+  }
+}
+
+.registration-container{
+  height: calc(100vh - 60px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register-sub-box{
+  width: 300px;
+  border-radius: 30px;
+  border: 2px solid black;
+  padding: 20px;
+}
+.title{
+  margin-bottom: 20px;
+  text-align: center;
+}
+input{
+  margin: 10px 0;
+  width: 100%;
+  height: 36px;
+  outline: none;
+  padding: 0 10px;
+  font-size: 18px;
+}
+.register-sub-box button{
+  width: 100%;
+  height: 36px;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgb(15, 54, 23);
+  border: none;
+  margin-top: 20px;
+}
+.route-link{
+  text-align: center;
+  margin-top: 12px;
+}
+.error{
+  margin-top: 10px;
+  color: red;
+}
+
+
+
+
+
+.single-recipe{
+  display: flex;
+  height: 300px;
+  width: 75%;
+  margin: 30px auto;
+}
+.single-recipe-img{
+  height: 300px;
+  width: 100%;
+}
+.save-recipe{
+  background-color: rgb(255, 226, 4);
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin: 10px 0;
+  
+}
+.single-recipe h3{
+  margin-bottom: 7px;
+}
+.single-recipe p{
+  margin-bottom: 20px;
+}
+.single-img-info{
+  width: 50%;
+  padding: 0 20px;
+}
+.single-img-side{
+  width: 50%;
+}
