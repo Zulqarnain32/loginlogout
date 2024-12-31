@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import { Link,useNavigate } from "react-router-dom"
 import axios from "axios"
+import  {useCookies} from "react-cookie"
 
 const Login = () => {
 
     const [ email,setEmail ] = useState("")
     const [ password,setPassword ] = useState("")
     const [ error,setError ] = useState("")
+    const [cookies, setCookies] = useCookies(["access_token"]);
+
     const navigate = useNavigate()
 
 
@@ -17,8 +20,11 @@ const Login = () => {
         .then(result => {
             if(result.data.message == "sucessfully login"){
               window.localStorage.setItem("id",result.data.id)
+              console.log("login ho geya");
+              setCookies("access_token",result.data.id)
+              
             setError("");
-            navigate('/')
+            navigate('/dashboard')
             window.location.reload();
           
             }
@@ -58,6 +64,7 @@ const Login = () => {
             //  required
            /> 
            <button type='submit'>Login</button>
+           <Link to = "/forgotPassword">Forgot Password?</Link>
            <p className='error'>{error}</p>
 
          </form>
